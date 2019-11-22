@@ -4,11 +4,11 @@ include <stdio.h>
 
 int main() {
 do{
-	static double[][] = new double[accounts][2];
+	static double[][] a= new double[accounts][2];
     char Exit;
 printf("Menu: press the number of function you want /n ");
 
-	printf("1) open bank acount/n 2)getBalance /n 3)setDeposit /n 4)withdrawl /n 5)close /n 6)intrest /n 7)printAll /n 8)closeAll");
+	printf("O) open bank acount/n B)getBalance /n D)setDeposit /n W)withdrawl /n C)close /n I)intrest /n P)printAll /n F)closeAll");
     scanf("%c", &Exit);
     
     
@@ -21,9 +21,12 @@ switch (Exit ) {
 
 			
 case O
+double amount=0.0;
+scanf(%lf,amount);
+
+open(a,amount);
 void open(double[][] a,double amount) {
 	printf("insert a number that you want to save in your bank account");
-	scanf(%lf,amount);
 	int count = 901;
 	if (!isFull(double[][] a)) {
 		for (int i = 0; i < accounts; i++)
@@ -50,9 +53,12 @@ bool isFull(double[][] a) {
 	return false;
 }
 case B
+int id;
+scanf(%d, id);
+
+getBalance(a,id}
 void getBalance(double a[][], int id) {
 	printf("insert a number that you want to save in your bank account");
-	scanf(%d, id);
 	for (int i = 0; i < accounts; i++) {
 		bool flag = false;
 		if (a[i][0] == id) {
@@ -63,9 +69,12 @@ void getBalance(double a[][], int id) {
 	}
 }
 case D
+int id;
+ double deposit;
+scanf(%lf,%d, deposit, id);
+setDeposit(a, id, deposit);
 void setDeposit(double a[][], int id, double deposit) {
 	printf("insert a number that you want to save in your bank account");
-	scanf(%lf,%d, deposit, id);
 	bool flag = false;
 	for (int i = 0; i < accounts; i++) {
 		if (a[i][0] == id)a[i][1] += deposit;
@@ -75,9 +84,12 @@ void setDeposit(double a[][], int id, double deposit) {
 	if (!flag)printf("the account dosent exist");	
 }
 case W
+ int id;
+ double amount;
+	scanf(%lf, %d, amount, id);
+withdrawl(a,id,amount);
 void withdrawl(double a[][], int id, double amount) {
 	printf("insert a number that you want to save in your bank account");
-	scanf(%lf, %d, amount, id);
 	bool flag = false;
 	for (int i = 0; i < accounts; i++)
 	{
@@ -93,9 +105,11 @@ void withdrawl(double a[][], int id, double amount) {
 	}
 }
 case C
+int id;
+	scanf(%d, id);
+close( a,  id);
 void close(double[][] a, int id) {
 	printf("insert a number that you want to save in your bank account");
-	scanf(%d, id);
 	bool flag = false;
 	for (int i = 0; i < accounts; i++) {
 		if (a[i][0] == id) {
@@ -107,9 +121,11 @@ void close(double[][] a, int id) {
 	if (!flag)printf("The account dosent exist");
 }
 case I
+int ribit;
+	scanf(%d, ribit);
+interest( a,ribit) ;
 void interest(double[][] a, int ribit) {
 	printf("insert a number that you want to save in your bank account");
-	scanf(%d, ribit);
 	ribit /= 100;
 	ribit += 1;
 		for (int i = 0; i < accounts; i++)
@@ -118,6 +134,7 @@ void interest(double[][] a, int ribit) {
 		}
 	}
 case P
+printAll(a);
 void printAll(double[][] a) {
 	for (int i = 0; i < accounts; i++){
 		if (a[i][0] != 0) {
@@ -127,7 +144,8 @@ void printAll(double[][] a) {
 
 	}
 }
-case E
+case F
+cloesAll(a);
 void cloesAll(double[][] a) {
 	for (int i = 0; i < accounts; i++)
 	{
@@ -138,7 +156,12 @@ void cloesAll(double[][] a) {
 	}
 	printf("All accounts are closed");
 }
-while(Exit!=E);
+case defult
+(
+			printf("you enterd a unliglle number");
+			}
+
+}while(Exit!=E);
 
 exit();
 }
