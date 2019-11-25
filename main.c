@@ -20,7 +20,7 @@ switch (Exit ) {
 	
 
 			
-case O
+case 'O'{
 double amount=0.0;
 scanf(%lf,amount);
 
@@ -51,8 +51,8 @@ bool isFull(double[][] a) {
 		if (a[i][0] == 0) return true;
 	}
 	return false;
-}
-case B
+}}
+case 'B'{
 int id;
 scanf(%d, id);
 
@@ -67,8 +67,8 @@ void getBalance(double a[][], int id) {
 		}
 		if (!flag)printf("the account is closed");
 	}
-}
-case D
+}}
+case 'D'{
 int id;
  double deposit;
 scanf(%lf,%d, deposit, id);
@@ -82,8 +82,8 @@ void setDeposit(double a[][], int id, double deposit) {
 		printf("The new account is %f", &a[i][1]);
 	}
 	if (!flag)printf("the account dosent exist");	
-}
-case W
+}}
+case 'W'{
  int id;
  double amount;
 	scanf(%lf, %d, amount, id);
@@ -103,8 +103,8 @@ void withdrawl(double a[][], int id, double amount) {
 			printf("The account dosent exist");
 		}
 	}
-}
-case C
+}}
+case 'C'{
 int id;
 	scanf(%d, id);
 close( a,  id);
@@ -119,8 +119,8 @@ void close(double[][] a, int id) {
 		}
 	}
 	if (!flag)printf("The account dosent exist");
-}
-case I
+}}
+case 'I'{
 int ribit;
 	scanf(%d, ribit);
 interest( a,ribit) ;
@@ -132,8 +132,8 @@ void interest(double[][] a, int ribit) {
 		{
 			if (a[i][0] != 0)a[i][1] += ribit;
 		}
-	}
-case P
+	}}
+case 'P'{
 printAll(a);
 void printAll(double[][] a) {
 	for (int i = 0; i < accounts; i++){
@@ -143,8 +143,8 @@ void printAll(double[][] a) {
 		}
 
 	}
-}
-case F
+}}
+case 'F'{
 cloesAll(a);
 void cloesAll(double[][] a) {
 	for (int i = 0; i < accounts; i++)
@@ -155,12 +155,12 @@ void cloesAll(double[][] a) {
 		}
 	}
 	printf("All accounts are closed");
-}
-case defult
+}}
+case default{
 (
 			printf("you enterd a unliglle number");
 			}
-
+}
 }while(Exit!=E);
 
 exit();
