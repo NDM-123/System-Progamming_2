@@ -2,7 +2,7 @@
 #include "myBank.h"
 
 
-int isFull() {
+    int isFull() {
 
 
 	for (int i = 0; i < accounts; i++)
@@ -15,10 +15,8 @@ int isFull() {
 
 	return 1;
 
-}
+    }
 			void open(double amount) {
-
-			
 
 				int count = 901;
 
@@ -32,7 +30,7 @@ int isFull() {
 
 							a[i][1] = amount;
 
-				printf("The new account number is %d", count);
+				printf("The new account number is %d\n", count);
 
 				break;
 
@@ -48,7 +46,7 @@ int isFull() {
 
 				else {
 
-					printf("the bank is full");
+					printf("the bank is full\n");
 
 				}
 
@@ -60,12 +58,10 @@ int isFull() {
 
 				for (int i = 0; i < accounts; i++) {
 
-				
-				
 
 					if (a[i][0] == id) {
 
-						printf("your balance is: %lf", a[i][1]);
+						printf("your balance is: %0.2lf\n", a[i][1]);
 
 						flag = 1;
 
@@ -74,7 +70,7 @@ int isFull() {
 				
 
 				}
-					if (flag==0)printf("the account is closed");
+					if (flag==0)printf("the account is closed\n");
 
 			}
 			void setDeposit(int id, double deposit) {
@@ -84,15 +80,17 @@ int isFull() {
 
 				for (int i = 0; i < accounts; i++) {
 
-					if (a[i][0] == id){a[i][1] += deposit;
+					if (a[i][0] == id){
+
+					    a[i][1] += deposit;
 
 					flag = 1;
 
-					printf("The new account is %lf", a[i][1]);
+		printf("The new amount in the account is %0.2lf\n", a[i][1]);
 				}
 				}
 
-				if (flag==0)printf("the account dosent exist");
+				if (flag==0)printf("the account dosent exist\n");
 
 			}
 			void withdrawl(int id, double amount) {
@@ -109,7 +107,7 @@ int isFull() {
 							a[i][1] -= amount;
 						flag=1;
 
-					printf("The amount in your account is: %lf", a[i][1]);
+			printf("The new amount in your account is: %0.2lf\n", a[i][1]);
 
 						}
 
@@ -117,7 +115,7 @@ int isFull() {
 
 
 				}
-				if(flag==0)printf("the account dosent exist");
+				if(flag==0)printf("the account dosent exist\n");
 			}
 			void close(int id) {
 
@@ -134,43 +132,37 @@ int isFull() {
 						a[i][1] = 0;
 
 						flag = 1;
+						printf("The account %d had successfully been closed\n",&id);
 
 					}
 
 				}
 
-				if (flag==0)printf("The account dosent exist");
+				if (flag==0)printf("The account dosent exist\n");
 			}
 			void interest(int ribit) {
-
-				
-				ribit /= 100;
-
-				ribit += 1;
+                double Nrib = (double)ribit;
+				Nrib += 100;
+				Nrib /= 100;
 
 				for (int i = 0; i < accounts; i++)
 
 				{
 
-					if (a[i][0] != 0)a[i][1] += ribit;
+					if (a[i][0] != 0)a[i][1] *= Nrib;
 
 				}
-
+                printf("The interest had successfully been inserted to all accounts\n")
 			}
 			void printAll() {
 
 				for (int i = 0; i < accounts; i++) {
 
 					if (a[i][0] != 0) {
-
-			printf("The amount in the account %lf is: %lf ",a[i][0], a[i][1]);
-
-
+					    int ac = (int)a[i][0];
+			printf("The amount in the account %d is: %0.2lf\n ",ac, a[i][1]);
 
 					}
-
-
-
 				}
 
 			}
@@ -190,7 +182,7 @@ int isFull() {
 
 				}
 
-				printf("All accounts are closed");
+				printf("All accounts are closed\n");
 
 			}
 
