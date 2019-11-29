@@ -3,8 +3,8 @@
 
 int main() {
 	char Exit;//holds the input
-	int id;/the acount id number
-	double deposit;money to enter into an acount
+	int id;//the acount id number
+	double deposit;//money to enter into an acount
 	double amount;//sum of money in an acount
 	int ribit;//add interest to acount
 	
@@ -13,7 +13,7 @@ int main() {
 
 
 
-	
+	//menu-asking the user to give an action he wants to do
 	do {
         printf("\nMenu: \tInsert the capital letter for function you want \n ");
         printf("1)'O' open bank acount \n"
