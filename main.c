@@ -2,11 +2,11 @@
 #include "myBank.h"
 
 int main() {
-	char Exit;
-	int id;
+	char Exit;//holds the input
+	int id;/the acount number
 	double deposit;
-	double amount;
-	int ribit;
+	double amount;//sum of money in an acount
+	int ribit;//add interest to acount
 	
 
 
