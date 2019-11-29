@@ -1,7 +1,8 @@
 #include <stdio.h>
 #include "myBank.h"
 
-//if there more than 50 acounts return 1.
+double a[accounts][2];
+//if the bank is full return 1.
     int isFull() {
 
 
@@ -16,7 +17,7 @@
 	return 1;
 
     }
-//open new acount with given amount
+//open new account with given amount
 			void open(double amount) {
 
 				int count = 901;
@@ -52,7 +53,7 @@
 				}
 
 			}
-			///return balanc of acount by it id
+			///return balance of a valid account
 			void getBalance(int id) {
 
 					int flag = 0;				
@@ -71,16 +72,18 @@
 				
 
 				}
-					if (flag==0)printf("the account is closed\n");
+					if (flag==0)printf("the account dosent exist\n");
 
 			}
-///enter the given deposit to the given acount
+//enter the given deposit to the given account
 			void setDeposit(int id, double deposit) {
 
 				
 				int flag = 0;
 
 				for (int i = 0; i < accounts; i++) {
+
+				            if(deposit<=0)return;                //invalid input
 
 					if (a[i][0] == id){
 
@@ -95,13 +98,14 @@
 				if (flag==0)printf("the account dosent exist\n");
 
 			}
-//draw given amount from given acount
+//draw given amount from given account
 			void withdrawl(int id, double amount) {
 			int flag =0;
 
 				
 				for (int i = 0; i < accounts; i++)
 				{
+				    if(amount<=0)return;                       //invalid input
 
 					if (a[i][0] == id) {
 
@@ -120,7 +124,7 @@
 				}
 				if(flag==0)printf("the account dosent exist\n");
 			}
-//close the given acount
+//close the given account
 			void close(int id) {
 
 			
@@ -136,7 +140,7 @@
 						a[i][1] = 0;
 
 						flag = 1;
-						printf("The account %d had successfully been closed\n",&id);
+						printf("The account %d had successfully been closed\n",id);
 
 					}
 
@@ -144,7 +148,7 @@
 
 				if (flag==0)printf("The account dosent exist\n");
 			}
-//enter an interest to acount
+//enter an interest to all accounts
 			void interest(int ribit) {
                 double Nrib = (double)ribit;
 				Nrib += 100;
@@ -157,9 +161,9 @@
 					if (a[i][0] != 0)a[i][1] *= Nrib;
 
 				}
-                printf("The interest had successfully been inserted to all accounts\n")
+                printf("The interest had successfully been inserted to all accounts\n");
 			}
-//print all the database acounts details.
+//print all the database accounts details.
 			void printAll() {
 
 				for (int i = 0; i < accounts; i++) {
@@ -172,7 +176,7 @@
 				}
 
 			}
-///close all the database acounts
+///close all the database accounts
 			void closeAll() {
 
 				for (int i = 0; i < accounts; i++)
@@ -192,14 +196,4 @@
 				printf("All accounts are closed\n");
 
 			}
-
-
-
-
-
-		
-
-
-	
-
 

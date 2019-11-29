@@ -3,10 +3,10 @@
 
 int main() {
 	char Exit;//holds the input
-	int id;//the acount id number
-	double deposit;//money to enter into an acount
-	double amount;//sum of money in an acount
-	int ribit;//add interest to acount
+	int id;//the account id number
+	double deposit;//money to enter into an account
+	double amount;//sum of money in an account
+	int ribit;//add interest to account
 	
 
 
@@ -16,14 +16,14 @@ int main() {
 	//menu-asking the user to give an action he wants to do
 	do {
         printf("\nMenu: \tInsert the capital letter for function you want \n ");
-        printf("1)'O' open bank acount \n"
-               " 2)'B' getBalance \n "
-               "3)'D' setDeposit \n "
-               "4)'W' withdrawl \n "
-               "5)'C' close \n"
-               " 6)'I' intrest \n"
-               " 7)'P' printAll \n "
-               "8)'E' closeAll\n");
+        printf("1)'O' Open bank account \n"
+               " 2)'B' Get Balance of bank account \n "
+               "3)'D' Set Deposit in bank account \n "
+               "4)'W' Withdrawl from bank account \n "
+               "5)'C' Close bank account\n"
+               " 6)'I' Add interest to all bank accounts \n"
+               " 7)'P' Print All bank accounts \n "
+               "8)'E' Close All bank accounts and exit program\n");
 	scanf(" %c", &Exit);
 		switch (Exit) {
 
