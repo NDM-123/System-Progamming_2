@@ -2,7 +2,16 @@
 Working with arrays and iterations in c
 
 
-This project contains  database of bank acounts.
- Menu is presented to the user and he choose one of the options. The program sent him to the  function(placed the function in the myBank file.)that make the action he asked for.
- The program support the action of creating acount, entering money and interest ,cheacking how much money in the acount.pull  money from  an acount,closing the acountand print all .
-acounts in Database.(Max 50).
+This project contains  database of bank accounts.
+ A menu is presented to the user and he choose one of the options. The program sends him to the function(the function is placed in the myBank file.)
+ that executes the action the user submitted.
+ The program support the following actions:
+ 1)Creating a bank account.
+ 2)Deposit money in the Bank account.
+ 3)Entering an interest to all bank accounts.
+ 4)Checking the bank account balance.
+ 5)Withdrawling  money from  an account.
+ 6)Print all.
+ 7)Closing all accounts.
+The max accounts in Database (Max 50).
+
