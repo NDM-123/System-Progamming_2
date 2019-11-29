@@ -3,8 +3,8 @@
 
 int main() {
 	char Exit;//holds the input
-	int id;/the acount number
-	double deposit;
+	int id;/the acount id number
+	double deposit;money to enter into an acount
 	double amount;//sum of money in an acount
 	int ribit;//add interest to acount
 	
