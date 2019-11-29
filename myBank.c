@@ -1,7 +1,7 @@
 #include <stdio.h>
 #include "myBank.h"
 
-
+//if there more than 50 acounts return 1.
     int isFull() {
 
 
@@ -16,6 +16,7 @@
 	return 1;
 
     }
+//open new acount with given amount
 			void open(double amount) {
 
 				int count = 901;
@@ -51,7 +52,7 @@
 				}
 
 			}
-			
+			///return balanc of acount by it id
 			void getBalance(int id) {
 
 					int flag = 0;				
@@ -73,6 +74,7 @@
 					if (flag==0)printf("the account is closed\n");
 
 			}
+///enter the given deposit to the given acount
 			void setDeposit(int id, double deposit) {
 
 				
@@ -93,6 +95,7 @@
 				if (flag==0)printf("the account dosent exist\n");
 
 			}
+//draw given amount from given acount
 			void withdrawl(int id, double amount) {
 			int flag =0;
 
@@ -117,6 +120,7 @@
 				}
 				if(flag==0)printf("the account dosent exist\n");
 			}
+//close the given acount
 			void close(int id) {
 
 			
@@ -140,6 +144,7 @@
 
 				if (flag==0)printf("The account dosent exist\n");
 			}
+//enter an interest to acount
 			void interest(int ribit) {
                 double Nrib = (double)ribit;
 				Nrib += 100;
@@ -154,6 +159,7 @@
 				}
                 printf("The interest had successfully been inserted to all accounts\n")
 			}
+//print all the database acounts details.
 			void printAll() {
 
 				for (int i = 0; i < accounts; i++) {
@@ -166,6 +172,7 @@
 				}
 
 			}
+///close all the database acounts
 			void closeAll() {
 
 				for (int i = 0; i < accounts; i++)
