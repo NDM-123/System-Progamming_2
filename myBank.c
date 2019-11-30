@@ -1,7 +1,11 @@
 #include <stdio.h>
 #include "myBank.h"
 
-double a[accounts][2];
+double a[accounts][2]={0};
+
+
+
+
 //if the bank is full return 1.
     int isFull() {
 
