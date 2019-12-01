@@ -162,7 +162,9 @@ double a[accounts][2]={0};
 
 				{
 
-					if (a[i][0] != 0)a[i][1] *= Nrib;
+					if (a[i][0] != 0){
+	if((a[i][1]*Nrib)>=0)a[i][1] *= Nrib;
+	}
 
 				}
                 printf("The interest had successfully been inserted to all accounts\n");
