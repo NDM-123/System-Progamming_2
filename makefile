@@ -1,6 +1,6 @@
 
 cc=gcc
-FLAG=
+FLAG=-wall
 
 all: myBanklib mains
 
